@@ -17,16 +17,16 @@
 import re,sys,_thread,time,random
 
 # regexps recognizing syntax elements
-comment_re = re.compile("\{.*?\}", re.DOTALL)
+comment_re = re.compile(r"\{.*?\}", re.DOTALL)
 declaration_re = re.compile(r'([A-Za-z0-9_\-]*?)\s+is\s+an?\s+(zombie|enslaved undead|' + \
                             r'ghost|restless undead|vampire|free-willed undead' + \
                             r'|demon|djinn)', re.I)
 
-task_re = re.compile("task\s+([A-Za-z0-9_-]*)", re.I)
-remember_re = re.compile("remember\s+(.*)", re.I)
+task_re = re.compile(r"task\s+([A-Za-z0-9_-]*)", re.I)
+remember_re = re.compile(r"remember\s+(.*)", re.I)
 
 string_re = re.compile('".*?"')
-integer_re = re.compile('[\-0-9\.]+')
+integer_re = re.compile(r'[\-0-9\.]+')
 
 kill=False
 
